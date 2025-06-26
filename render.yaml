@@ -1,0 +1,11 @@
+# render.yaml
+
+# Render에서 자동 배포 설정
+services:
+  - type: web
+    name: telegram-the-laurent-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    autoDeploy: true
